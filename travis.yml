@@ -1,0 +1,43 @@
+env:
+  global:
+    - email=`git log -1 --pretty=format:'%ae'`
+    
+language: c
+
+compiler:
+  - gcc
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev
+  - sudo apt-get install -y gcovr 
+  - sudo apt-get install python3-pandas
+  - sudo apt-get install python3-xlrd
+install:
+  - echo "fdfd"
+
+script:
+  - python3 ReacticeC.py
+  
+
+git:
+  depth: 2
+  
+branches:
+  only:
+   - gh-pages
+
+
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: gh-pages
+    condition: $email != deploy@travis-ci.org
+    
+after_failure:
+  - echo problem
+
+

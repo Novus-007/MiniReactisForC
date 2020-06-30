@@ -3,7 +3,9 @@
  - [ ] Browse for Temp Folder which has all dependency file in **CFile Name**
  - [ ] And follow the rest as per the image given below.
  
-![Sample Image]https://github.com/Novus-007/MiniReactisForC/edit/master/Sample.png)
+![SampleImage](https://github.com/Novus-007/MiniReactisForC/blob/master/Sample.png)
+
+
 
  - [ ] After Pressing the **Run** Button it should generate an **Output.csv** file in the Folder where the c file is present.
  - [ ]  Hope you got an overview of how to use the tool based on the example given.
